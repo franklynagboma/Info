@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "info-1fe38",
+    "project_number": "557867038995",
+    "name": "Info"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557867038995:android:0587b7e0e30bf924",
+        "client_id": "android:com.franklyn.info",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.franklyn.info",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557867038995-nnhl71r8cd301d93g8st620vpmg7di2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.franklyn.info",
+            "certificate_hash": "AE448D60EBF53AB70193E9C438DC1B1C0DDDA15C"
+          }
+        },
+        {
+          "client_id": "557867038995-g9kte2oqltlm785tbrod697lk5nfvpse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

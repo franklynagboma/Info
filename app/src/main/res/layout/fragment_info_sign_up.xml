@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:id="@+id/reg_layout">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textColorHint="@color/colorAccent"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="First and Last name"
+                        android:id="@+id/web_infoName"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:drawableLeft="@android:drawable/ic_menu_myplaces"
+                        android:drawableStart="@android:drawable/ic_menu_myplaces"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textColorHint="@color/colorAccent"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:id="@+id/web_userText"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:drawableLeft="@android:drawable/ic_dialog_email"
+                        android:drawableStart="@android:drawable/ic_dialog_email"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textColorHint="@color/colorAccent"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:id="@+id/web_passwordText"
+                        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+                        android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                        android:inputType="textWebPassword"
+                        android:singleLine="true"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textColorHint="@color/colorAccent"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Confirm Password"
+                        android:id="@+id/confirm_password"
+                        android:inputType="textWebPassword"
+                        android:singleLine="true"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_below="@+id/reg_layout">
+
+            <android.support.v7.widget.CardView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                card:cardElevation="7dp"
+                card:cardCornerRadius="2dp"
+                card:cardBackgroundColor="@color/colorGroup">
+
+                <RelativeLayout
+                    android:layout_height="280dp"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEXT"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp"/>
+
+                    <!--<android.support.design.widget.FloatingActionButton
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@android:drawable/ic_input_get"
+                        android:id="@+id/web_account_view"
+                        android:layout_weight="0.6" />-->
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+</RelativeLayout>

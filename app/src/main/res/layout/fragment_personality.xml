@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/card_light">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/card"
+                android:padding="2sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="A"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:text="B"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="2dp">
+
+
+                    <RadioGroup
+                        android:id="@+id/rgPersonality1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality1A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality1A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality1B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality1B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality2A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality2A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality2B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality2B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality3A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality3A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality3B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality3B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality4A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality4A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality4B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality4B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality5A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality5A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality5B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality5B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality6A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality6A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality6B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality6B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality7A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality7A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality7B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality7B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality8A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality8A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality8B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality8B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality9A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality9A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality9B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality9B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#C0C0C0"/>
+                    <RadioGroup
+                        android:id="@+id/rgPersonality10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality10A"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality10A"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/rbPersonality10B"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="@string/personality10B"
+                            android:layout_marginBottom="5dp"
+                            app:buttonTint="@color/colorAccent"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

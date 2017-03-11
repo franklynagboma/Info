@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/holo_green_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginEnd="40dp">
+            <!--  Login Label -->
+
+            <EditText android:id="@+id/et_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:drawableStart="@android:drawable/ic_media_play"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:hint="Login" />
+
+            <!--  Password Label -->
+            <EditText android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:drawableStart="@android:drawable/ic_media_play"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:hint="Password"/>
+
+
+            <Button
+                android:id="@+id/btn_valider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="12dp"
+                android:text="Connection"/>
+
+            <TextView android:id="@+id/link_signup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginBottom="12dp"
+                android:text="Vous n'avez pas encore de compte ? Créez-en un !"
+                android:textSize="12sp"/>
+            <TextView android:id="@+id/pass_oub"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="J'ai oublié mon mot de passe"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

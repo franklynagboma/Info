@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:title="Copy Name"
+            android:visible="true"
+            android:checked="true"
+            android:id="@+id/copy_name"
+            app:showAsAction="never"
+            />
+        <item
+            android:title="Copy Emails"
+            android:visible="true"
+            android:id="@+id/copy_email"
+            app:showAsAction="never"
+            />
+        <item
+            android:title="Copy Mobile"
+            android:visible="true"
+            android:id="@+id/copy_mobile"
+            app:showAsAction="never"
+            />
+        <item
+            android:title="Refresh"
+            android:visible="true"
+            android:id="@+id/refresh"
+            app:showAsAction="never"
+            />
+
+
+        <item
+            android:title="Send Info"
+            android:visible="true"
+            android:id="@+id/send_info"
+            app:showAsAction="never"
+            />
+
+</menu>

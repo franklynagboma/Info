@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">Info</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="info_signup">Do not have a GMail account? Sign Up on INFO.</string>
+    <string name="info_sign_up">Not yet registered? Sign Up on INFO.</string>
+    <string name="click_delete">Click to delete</string>
+    <string name="save_only">Save only</string>
+    <string name="save_and_info">Save and register INFO</string>
+    <string name="sign_up_form">Sign up on INFO</string>
+    <string-array name="occupation">
+        <item>none</item>
+        <item>Student</item>
+        <item>Computer Engineer</item>
+        <item>Software Engineer</item>
+        <item>Software developer</item>
+        <item>Mobile developer</item>
+        <item>Constructor</item>
+        <item>Enter Occupation</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="file">
+        <item>file type</item>
+        <item>docx</item>
+        <item>PDF</item>
+    </string-array>
+
+
+    <!--Personality-->
+    <string name="personality1A"> I frequently find myself feeling irritable, impatient or anxious at work, especially when demand is high </string>
+    <string name="personality1B"> Always calm at work irrespective of the demands </string>
+    <string name="personality2A"> I often work on evenings and weekends and/or i rarely take an email-free holiday </string>
+    <string name="personality2B"> I start and end my day work base on the current company hours </string>
+    <string name="personality3A"> Outgoing, very friendly </string>
+    <string name="personality3B"> Often shy and reserved </string>
+    <string name="personality4A"> Don’t mind attention </string>
+    <string name="personality4B"> Usually avoids attention </string>
+    <string name="personality5A"> Speak-think-speak </string>
+    <string name="personality5B"> Think-speak-think </string>
+    <string name="personality6A"> More expressive, likes interacting and enthusiastic </string>
+    <string name="personality6B"> More thoughtful, private and usually quiet </string>
+    <string name="personality7A"> Enjoys meeting a lot of new people </string>
+    <string name="personality7B"> Prefers to be close to a few people </string>
+    <string name="personality8A"> Favour an energetic atmosphere </string>
+    <string name="personality8B"> Favour a calm atmosphere </string>
+    <string name="personality9A"> Prefers excitement and multitasking </string>
+    <string name="personality9B"> Likes concentration and focus on few tasks </string>
+    <string name="personality10A"> Extend yourself into the environment </string>
+    <string name="personality10B"> Defend against external demand and intrusion </string>
+
+    <!--Info-->
+    <string name="info1A"> Like hearing facts and details first </string>
+    <string name="info1B"> Like hearing general concepts first </string>
+    <string name="info2A"> Patient continuation of what is with fine tuning </string>
+    <string name="info2B"> Impatient with details but does not mind complicated situation </string>
+    <string name="info3A"> Prefers continuation of what is with fine tuning </string>
+    <string name="info3B"> Prefers changes, sometimes even radical, to continuation of what is </string>
+    <string name="info4A"> Value being surrounded by realistic people </string>
+    <string name="info4B"> Value being surrounded by imaginative people </string>
+    <string name="info5A"> Take in information in a precise and exact manner </string>
+    <string name="info5B"> Take in information in chunks, innovative manner </string>
+    <string name="info6A"> Prefer the tried and true </string>
+    <string name="info6B"> Prefer the new and untried </string>
+    <string name="info7A"> See problems as needing specific solutions based on experience, preferring established problem-solving method </string>
+    <string name="info7B"> See problems as opportunity to innovate based on inspiration, preferring new-problem-solving method </string>
+    <string name="info8A"> Focus on the practical application of a situation </string>
+    <string name="info8B"> Focus on the future possibilities of a situation </string>
+    <string name="info9A"> Value realism </string>
+    <string name="info9B"> Value imagination </string>
+    <string name="info10A"> Want pragmatic leadership </string>
+    <string name="info10B"> Want visionary leadership </string>
+
+    <!--Forming-->
+    <string name="form1A"> Team player </string>
+    <string name="form1B"> Work alone </string>
+    <string name="form2A"> Select my own team </string>
+    <string name="form2B"> Work with already selected team or team given to me </string>
+    <string name="form3A"> New project, new team members </string>
+    <string name="form3B"> Like to stick to my old team members </string>
+    <string name="form4A"> Like physical communication with my team members </string>
+    <string name="form4B"> Like instance messaging with team members </string>
+
+    <!--Decision-->
+    <string name="decision1A"> Seeks general facts and objectivity </string>
+    <string name="decision1B"> Seeks interpersonal harmony </string>
+    <string name="decision2A"> Remains detached when making decision, weighing pros and cons </string>
+    <string name="decision2B"> Remain personally involved when making a decision, weighing  values </string>
+    <string name="decision3A"> Search for flaws in an argument </string>
+    <string name="decision3B"> Search for points of agreement in an argument </string>
+    <string name="decision4A"> Most convinced by logic </string>
+    <string name="decision4B"> Most convinced by how you feel </string>
+    <string name="decision5A"> Look at problems in terms of cause and effect </string>
+    <string name="decision5B"> Look at problem in terms of impact on people </string>
+    <string name="decision6A"> Find incompetence stressful </string>
+    <string name="decision6B"> Find disharmony stressful </string>
+
+</resources>

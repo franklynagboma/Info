@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp"
+        fab:fab_addButtonColorNormal="@color/colorPrimary"
+        fab:fab_addButtonColorPressed="@color/white_tin"
+        fab:fab_addButtonSize="mini"
+        fab:fab_addButtonPlusIconColor="@color/black_transparent"
+        fab:fab_expandDirection="up"
+        fab:fab_labelStyle="@style/fab_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save to local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_title="Local"
+            fab:fab_colorPressed="@color/white_tin" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab_stage"
+            fab:fab_icon="@drawable/save_sync"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_title="Local &amp; Sync"
+            fab:fab_colorPressed="@color/white_tin"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab_test"
+            fab:fab_icon="@drawable/ic_testing"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_title="Test Server"
+            fab:fab_colorPressed="@color/white_tin"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

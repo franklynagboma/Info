@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@color/card_light"
+    android:weightSum="100">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="95"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/image_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp">
+                            <ImageView
+                                android:id="@+id/user_info_Image"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:layout_margin="2dp"
+                                android:src="@drawable/ic_profile_picture"
+                                android:layout_gravity="center" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="bottom">
+                                <ImageView
+                                    android:id="@+id/info_gallery"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/ic_picture"
+                                    android:padding="5dp"/>
+                                <ImageView
+                                    android:id="@+id/info_camera"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/ic_camera"
+                                    android:padding="5dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--<Spinner
+                            android:id="@+id/file_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:minWidth="70dp"
+                            android:layout_below="@+id/image_layout"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/edit_view" />-->
+
+                        <!--<TextView
+                            android:id="@+id/text_only"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:minWidth="70dp"
+                            android:layout_below="@+id/image_layout"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true" />-->
+
+                        <LinearLayout
+                            android:id="@+id/storage_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_below="@+id/image_layout"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/edit_view">
+                            <EditText
+                                android:id="@+id/file_name"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1.4"
+                                android:gravity="center"
+                                android:hint="PDF only, not more than 10Mb"
+                                android:textColor="@color/black_text"
+                                android:textSize="10sp"
+                                android:textCursorDrawable="@null"
+                                android:inputType="none"
+                                android:enabled="false"/>
+                            <Button
+                                android:id="@+id/storage_button"
+                                android:layout_width="0dp"
+                                android:layout_height="45dp"
+                                android:layout_weight="0.6"
+                                android:background="@color/card"
+                                android:layout_margin="1dp"
+                                android:text="Storage"
+                                android:textSize="15sp"
+                                android:textColor="@android:color/white"/>
+                            <!--use the circular bottom on the same view as the Button view-->
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/get_storage_files"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@+id/storage_layout"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:padding="10dp"/>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </LinearLayout>
+</LinearLayout>

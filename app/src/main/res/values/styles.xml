@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <style name="info" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="colorControlActivated">@android:color/transparent</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+    </style>
+
+    <style name="TextInput" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="StyledTilEditText">
+        <item name="android:theme">@style/StyledTilEditTextTheme</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
+    <style name="StyledTilEditTextTheme">
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <!--<item name="android:textColor">@color/theme_primary</item>-->
+        <!--
+        <item name="android:textColorPrimary">@color/blue</item>
+        <item name="android:textSize">@dimen/styledtil_edit_text_size</item>-->
+    </style>
+
+    <style name="input_text" parent="@style/TextAppearance.AppCompat">
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="login_text" parent="@style/TextAppearance.AppCompat">
+        <item name="android:typeface">monospace</item>
+    </style>
+
+</resources>
