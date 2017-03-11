@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fab="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
+    <!--<com.getbase.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/fab_menu"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        xmlns:fab="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -22,18 +22,18 @@
         fab:fab_labelStyle="@style/fab_style">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/save to local"
+            android:id="@+id/save_to_local"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            fab:fab_icon="@drawable/"
+            fab:fab_icon="@drawable/save_only"
             fab:fab_colorNormal="@color/white"
             fab:fab_title="Local"
             fab:fab_colorPressed="@color/white_tin" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save_sync"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fab_stage"
             fab:fab_icon="@drawable/save_sync"
             fab:fab_colorNormal="@color/white"
             fab:fab_title="Local &amp; Sync"
@@ -48,6 +48,6 @@
             fab:fab_title="Test Server"
             fab:fab_colorPressed="@color/white_tin"/>
 
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>-->
 
 </RelativeLayout>
