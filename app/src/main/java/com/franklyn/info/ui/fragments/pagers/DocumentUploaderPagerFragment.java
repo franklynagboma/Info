@@ -78,7 +78,7 @@ public class DocumentUploaderPagerFragment extends Fragment implements AdapterVi
 
         fileDocument.setAdapter(fileAdapter);
         fileDocument.setOnItemSelectedListener(this);*/
-        
+
     }
 
     @Override
@@ -90,5 +90,9 @@ public class DocumentUploaderPagerFragment extends Fragment implements AdapterVi
                 Log.e(LOG_TAG, getUri.getPath());
                 Log.e(LOG_TAG, getUri.getLastPathSegment());
             }
+    }
+
+    public void changesDetected() {
+
     }
 }
