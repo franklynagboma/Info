@@ -64,6 +64,7 @@ public class Info extends AppCompatActivity
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Bind layout to view.
         setContentView(R.layout.activity_info);
 
         header = (FrameLayout) findViewById(R.id.header_container);
@@ -100,12 +101,12 @@ public class Info extends AppCompatActivity
                 .commit();*/
 
         //user login 2
-        /*getSupportFragmentManager().beginTransaction()
-                .add(R.id.info_container, new LoginFragment(), LOG_IN)
-                .commit();*/
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.info_container, new SignUpFragment(), FILL)
+                .add(R.id.info_container, new LoginFragment(), LOG_IN)
                 .commit();
+        /*getSupportFragmentManager().beginTransaction()
+                .add(R.id.info_container, new SignUpFragment(), FILL)
+                .commit();*/
 
         //contacts list
         /*getSupportFragmentManager().beginTransaction()
@@ -119,6 +120,44 @@ public class Info extends AppCompatActivity
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.info_container, new InfoUserFragment())
                 .commit();*/
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e(logTag, "onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //present view to the user.
+        Log.e(logTag, "onResume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        //called from onStop
+        Log.e(logTag, "onRestart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e(logTag, "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e(logTag, "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e(logTag, "onDestroy");
     }
 
     @Override

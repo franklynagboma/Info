@@ -32,11 +32,10 @@ public class ContactPagerFragment extends Fragment {
 
     private final String LOG_TAG = ContactPagerFragment.class.getSimpleName();
 
-    private EditText countryCode, mobileNumber, emailAddress, altEmailAddress;
+    private EditText mobileNumber, emailAddress, altEmailAddress;
     private AutoCompleteTextView countryName;
     private ArrayAdapter<String> autoTextAdapter;
 
-    public static final String COUNTRY_CODE = "country_code";
     public static final String MOBILE_NUMBER = "mobile_number";
     public static final String COUNTRY_NAME = "country_name";
     public static final String EMAIL_ADDRESS = "email_address";
@@ -62,8 +61,7 @@ public class ContactPagerFragment extends Fragment {
             if(!isVisibleToUser) {
                 try {
 
-                    if(TextUtils.isEmpty(countryCode.getText().toString())
-                            || TextUtils.isEmpty(countryName.getText().toString())
+                    if(TextUtils.isEmpty(countryName.getText().toString())
                             || TextUtils.isEmpty(mobileNumber.getText().toString())
                             || TextUtils.isEmpty(emailAddress.getText().toString())
                             || TextUtils.isEmpty(altEmailAddress.getText().toString()) ) {
@@ -89,7 +87,6 @@ public class ContactPagerFragment extends Fragment {
         ((TextView) init.findViewById(R.id.text_alt_name))
                 .setTypeface(AppController.getInstance().getProximaFace(getActivity()));*/
 
-        countryCode = (EditText) init.findViewById(R.id.country_code);
         //countryCode.setTypeface(AppController.getInstance().getRalewayBoldFace(getActivity()));
         mobileNumber = (EditText) init.findViewById(R.id.mobile_number);
         //mobileNumber.setTypeface(AppController.getInstance().getRalewayBoldFace(getActivity()));
@@ -114,7 +111,6 @@ public class ContactPagerFragment extends Fragment {
 
     private void eventHandler(View event) {
 
-        countryCode.addTextChangedListener(new TextChecker(getActivity(),COUNTRY_CODE));
         countryName.addTextChangedListener(new TextChecker(getActivity(),COUNTRY_NAME));
         mobileNumber.addTextChangedListener(new TextChecker(getActivity(),MOBILE_NUMBER));
         emailAddress.addTextChangedListener(new TextChecker(getActivity(),EMAIL_ADDRESS));

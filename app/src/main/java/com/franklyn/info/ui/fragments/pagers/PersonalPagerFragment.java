@@ -40,14 +40,12 @@ public class PersonalPagerFragment extends Fragment {
     private final String LOG_TAG = PersonalPagerFragment.class.getSimpleName();
 
     private String title;
-    private EditText firstName, lastName,
-            otherNames, nok;
+    private EditText firstName, lastName, otherNames;
     private RadioGroup gender;
 
     public static final String FIRST_NAME = "first_name";
     public static final String LAST_NAME = "last_name";
     public static final String OTHER_NAMES = "other_names";
-    public static final String NOK = "nok";
 
     @Nullable
     @Override
@@ -72,7 +70,6 @@ public class PersonalPagerFragment extends Fragment {
                     if(TextUtils.isEmpty(firstName.getText().toString())
                             || TextUtils.isEmpty(lastName.getText().toString())
                             || TextUtils.isEmpty(otherNames.getText().toString())
-                            || TextUtils.isEmpty(nok.getText().toString())
                             || gender.getCheckedRadioButtonId() == -1) {
 
                         Toast.makeText(getActivity(), "Personal Information, incompletely",
@@ -106,8 +103,6 @@ public class PersonalPagerFragment extends Fragment {
         //lastName.setTypeface(AppController.getInstance().getRalewayBoldFace(getActivity()));
         otherNames = (EditText) init.findViewById(R.id.other_names);
         //otherNames.setTypeface(AppController.getInstance().getRalewayBoldFace(getActivity()));
-        nok = (EditText) init.findViewById(R.id.nok);
-        //nok.setTypeface(AppController.getInstance().getRalewayBoldFace(getActivity()));
 
         gender = (RadioGroup) init.findViewById(R.id.radio_gender);
 
@@ -118,7 +113,6 @@ public class PersonalPagerFragment extends Fragment {
         firstName.addTextChangedListener(new TextChecker(getActivity(), FIRST_NAME));
         lastName.addTextChangedListener(new TextChecker(getActivity(), LAST_NAME));
         otherNames.addTextChangedListener(new TextChecker(getActivity(), OTHER_NAMES));
-        nok.addTextChangedListener(new TextChecker(getActivity(), NOK));
 
         gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

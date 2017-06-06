@@ -2,13 +2,14 @@ package com.franklyn.info.helper;
 
 import android.content.Context;
 import android.os.Handler;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
  * Created by FRANKLYN on 03/13/2016.
  */
-public class TextWriter extends TextView {
+public class TextWriter extends AppCompatTextView {
 
 
     private CharSequence mText;

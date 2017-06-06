@@ -8,6 +8,8 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -36,6 +39,8 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
     private CardView eCard, pwCard, cpwCard;
     private TextInputLayout eInput, pwInput,cpwInput;
     private EditText emailReg, passwordReg, confirmPasswordReg;
+    //private ImageView seePwd, seeCpwd;
+    //private boolean seeP, seeCp;
 
     public Registered filled;
 
@@ -88,6 +93,35 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
                     filled.filledCompleted(SAVED_FILL, getEmail, getPassword);
                 }
                 break;
+
+            /*case R.id.see_pw_reg:
+                if(!seeP) {
+                    passwordReg.setTransformationMethod(PasswordTransformationMethod
+                            .getInstance());
+                    seePwd.setImageResource(R.drawable.asterisk);
+                    seeP = true;
+                }
+                else {
+                    passwordReg.setTransformationMethod(HideReturnsTransformationMethod
+                            .getInstance());
+                    seePwd.setImageResource(R.drawable.circular_image);
+                    seeP = false;
+                }
+                break;
+            case R.id.see_cpw_reg:
+                if(!seeCp) {
+                    confirmPasswordReg.setTransformationMethod(PasswordTransformationMethod
+                            .getInstance());
+                    seeCpwd.setImageResource(R.drawable.asterisk);
+                    seeCp = true;
+                }
+                else {
+                    confirmPasswordReg.setTransformationMethod(HideReturnsTransformationMethod
+                            .getInstance());
+                    seeCpwd.setImageResource(R.drawable.circular_image);
+                    seeCp = false;
+                }
+                break;*/
         }
     }
     private void init(View view) {
@@ -111,6 +145,11 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
         emailReg = (EditText) view.findViewById(R.id.email_edit_reg);
         passwordReg = (EditText) view.findViewById(R.id.password_edit_reg);
         confirmPasswordReg = (EditText) view.findViewById(R.id.confirm_password_edit_reg);
+
+        /*seePwd = (ImageView) view.findViewById(R.id.see_pw_reg);
+        seePwd.setOnClickListener(this);
+        seeCpwd = (ImageView) view.findViewById(R.id.see_cpw_reg);
+        seeCpwd.setOnClickListener(this);*/
     }
 
     private void setViewElevator(View view) {
@@ -264,7 +303,6 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
             //check if the password is equal
             Info.snackBar(v, "Passwords does not match");
             confirmPasswordReg.setError("Not match");
-            confirmPasswordReg.getText().clear();
             confirmPasswordReg.requestFocus();
             return false;
         }

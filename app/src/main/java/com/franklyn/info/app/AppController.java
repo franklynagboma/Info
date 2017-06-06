@@ -27,10 +27,8 @@ public class AppController extends Application{
     public static String FIRST_NAME = "";
     public static String LAST_NAME = "";
     public static String OTHER_NAMES = "";
-    public static String NOK = "";
     public static String GENDER = "";
     //contact
-    public static String COUNTRY_CODE = "";
     public static String MOBILE_NUMBER = "";
     public static String COUNTRY_NAME = "";
     public static String EMAIL_ADDRESS = "";
@@ -69,6 +67,11 @@ public class AppController extends Application{
     public static String PERSONALITY8 = "";
     public static String PERSONALITY9 = "";
     public static String PERSONALITY10 = "";
+    //Details
+    public static String SUMMARY = "";
+    public static String JOB = "";
+    public static String YEAR_EXP = "";
+    public static String CURRENTLY = "";
     //skills and experience
     public static String PRO_LANG = "";
     public static ArrayList<String> LIST_PRO_LANG = new ArrayList<>();

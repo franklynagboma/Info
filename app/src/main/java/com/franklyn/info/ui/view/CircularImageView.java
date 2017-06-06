@@ -8,10 +8,10 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.AppCompatImageView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
@@ -24,7 +24,7 @@ import java.lang.reflect.InvocationTargetException;
  * Handles fetching an image from a URL as well as the life-cycle of the
  * associated request.
  */
-public class CircularImageView extends ImageView {
+public class CircularImageView extends AppCompatImageView {
     public boolean mCircled;
 
     /** The URL of the network image to load */

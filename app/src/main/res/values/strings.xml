@@ -21,6 +21,7 @@
         <item>Enter Occupation</item>
     </string-array>
 
+    <string name="currently">Currently working?</string>
     <string-array name="gender">
         <item>Male</item>
         <item>Female</item>

@@ -249,5 +249,6 @@ public class PersonalityFragment extends Fragment implements RadioGroup.OnChecke
         A10 = (AppCompatRadioButton) person.findViewById(R.id.rbPersonality10A);
         B10 = (AppCompatRadioButton) person.findViewById(R.id.rbPersonality10B);
         g10.setOnCheckedChangeListener(this);
+
     }
 }

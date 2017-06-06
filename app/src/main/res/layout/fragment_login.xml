@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:android.support.design="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -57,8 +58,6 @@
                         android:src="@drawable/ic_send_email"/>
                     </LinearLayout>
                     <android.support.v7.widget.CardView
-                        xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:card="http://schemas.android.com/apk/res-auto"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:id="@+id/email_card"
@@ -72,8 +71,7 @@
                     android:hint="Email"
                     android:id="@+id/email"
                     android:textColorHint="@color/colorAccent"
-                    android.support.design:hintTextAppearance="@style/login_text"
-                    >
+                    android.support.design:hintTextAppearance="@style/login_text">
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -85,8 +83,7 @@
                         android:id="@+id/user_email"
                         android:inputType="textWebEmailAddress"
                         android:textCursorDrawable="@null"
-                        android:maxLines="1"
-                        />
+                        android:maxLines="1" />
                 </android.support.design.widget.TextInputLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
@@ -110,8 +107,6 @@
                         android:src="@drawable/ic_access"/>
                         </LinearLayout>
                     <android.support.v7.widget.CardView
-                        xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:card="http://schemas.android.com/apk/res-auto"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:id="@+id/key_card"
@@ -125,6 +120,8 @@
                     android:gravity="bottom"
                     android:background="@color/white"
                     android:textColorHint="@color/colorAccent"
+                    app:passwordToggleContentDescription="view"
+                    app:passwordToggleEnabled="true"
                     android.support.design:hintTextAppearance="@style/login_text"
                     >
                     <EditText
@@ -136,7 +133,7 @@
                         android:paddingRight="5dp"
                         android:paddingTop="10dp"
                         android:id="@+id/user_key"
-                        android:inputType="text"
+                        android:inputType="textWebPassword"
                         android:textCursorDrawable="@null"
                         android:maxLines="1"
                         android:imeOptions="actionSend"

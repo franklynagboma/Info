@@ -15,6 +15,7 @@ import com.franklyn.info.ui.fragments.pagers.ContactPagerFragment;
 import com.franklyn.info.ui.fragments.pagers.PersonalPagerFragment;
 import com.franklyn.info.ui.fragments.pagers.DocumentUploaderPagerFragment;
 import com.franklyn.info.ui.fragments.pagers.quetionaire.DecisionFragment;
+import com.franklyn.info.ui.fragments.pagers.quetionaire.DetailsFragment;
 import com.franklyn.info.ui.fragments.pagers.quetionaire.FormingFragment;
 import com.franklyn.info.ui.fragments.pagers.quetionaire.InformationPreFragment;
 import com.franklyn.info.ui.fragments.pagers.quetionaire.PersonalityFragment;
@@ -65,8 +66,8 @@ public class SignUpFragment extends Fragment {
                 new InformationPreFragment());
         pagerAdapter.addFragment("Personality Preference",
                 new PersonalityFragment());
-        pagerAdapter.addFragment("Upload",
-                new DocumentUploaderPagerFragment());
+        pagerAdapter.addFragment("NO name yet",
+                new DetailsFragment());
 
         viewPager.setAdapter(pagerAdapter);
         viewPager.setClipToPadding(false);

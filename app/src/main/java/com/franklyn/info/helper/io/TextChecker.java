@@ -1,6 +1,7 @@
 package com.franklyn.info.helper.io;
 
 import android.content.Context;
+import android.support.design.widget.TextInputLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.View;
 import com.franklyn.info.app.AppController;
 import com.franklyn.info.ui.fragments.pagers.ContactPagerFragment;
 import com.franklyn.info.ui.fragments.pagers.PersonalPagerFragment;
+import com.franklyn.info.ui.fragments.pagers.quetionaire.DetailsFragment;
 
 /**
  * Created by AGBOMA franklyn on 7/9/16.
@@ -19,6 +21,7 @@ public class TextChecker implements TextWatcher {
     private final String LOG_TAG = TextChecker.class.getSimpleName();
 
     private Context context;
+    private TextInputLayout inputLayout;
     private String editText;
     private View view;
 
@@ -28,6 +31,13 @@ public class TextChecker implements TextWatcher {
     private String workExpFour = "";
     private String workExpFive = "";
 
+    public TextChecker(){}
+
+    public TextChecker(Context context, TextInputLayout inputLayout, String editText) {
+        this.context = context;
+        this.inputLayout = inputLayout;
+        this.editText = editText;
+    }
 
     public TextChecker(Context context, String editText) {
         this.context = context;
@@ -67,16 +77,8 @@ public class TextChecker implements TextWatcher {
             AppController.OTHER_NAMES = charSequence.toString().trim();
             Log.e(LOG_TAG, "OtherS Names= " + AppController.OTHER_NAMES);
         }
-        if(editText.equalsIgnoreCase(PersonalPagerFragment.NOK)) {
-            AppController.NOK = charSequence.toString().trim();
-            Log.e(LOG_TAG, "NOK= " + AppController.NOK);
-        }
 
         //contact
-        if(editText.equalsIgnoreCase(ContactPagerFragment.COUNTRY_CODE)) {
-            AppController.COUNTRY_CODE = charSequence.toString().trim();
-            Log.e(LOG_TAG, "Country code= " + AppController.COUNTRY_CODE);
-        }
         if(editText.equalsIgnoreCase(ContactPagerFragment.MOBILE_NUMBER)) {
             AppController.MOBILE_NUMBER = charSequence.toString().trim();
             Log.e(LOG_TAG, "Mobile= " + AppController.MOBILE_NUMBER);
@@ -92,6 +94,27 @@ public class TextChecker implements TextWatcher {
         if(editText.equalsIgnoreCase(ContactPagerFragment.ALT_EMAIL_ADDRESS)) {
             AppController.ALT_EMAIL_ADDRESS = charSequence.toString().trim();
             Log.e(LOG_TAG, "Alt email= " + AppController.ALT_EMAIL_ADDRESS);
+        }
+
+        //Details
+        if(editText.equalsIgnoreCase(DetailsFragment.SUMMARY)) {
+            //inputLayout.setError("Not more than 300 words");
+            inputLayout.setError(charSequence.toString().trim().length() + " of 300");
+            if(charSequence.toString().trim().length() > 300)
+                DetailsFragment.stringLength = false;
+            else
+                DetailsFragment.stringLength = true;
+
+            AppController.SUMMARY = charSequence.toString().trim();
+            Log.e(LOG_TAG, "Summary= " + AppController.SUMMARY);
+        }
+        if(editText.equalsIgnoreCase(DetailsFragment.JOB)) {
+            AppController.JOB = charSequence.toString().trim();
+            Log.e(LOG_TAG, "Job= " + AppController.JOB);
+        }
+        if(editText.equalsIgnoreCase(DetailsFragment.YEAR_EXP)) {
+            AppController.YEAR_EXP = charSequence.toString().trim();
+            Log.e(LOG_TAG, "Year_exp= " + AppController.YEAR_EXP);
         }
 
         //skills and experience
