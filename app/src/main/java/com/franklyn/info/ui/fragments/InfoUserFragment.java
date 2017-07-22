@@ -157,10 +157,10 @@ public class InfoUserFragment extends Fragment {
 
     private void checkBundle(Bundle bundle) {
 
-        tname = bundle.getString(Info.NAME);
-        temail = bundle.getString(Info.EMAIL);
-        tnewEmail = bundle.getString(Info.NEW_EMAIL);
-        taddEmail = bundle.getString(Info.ADD_EMAIL);
+        tname = bundle.getString(InfoCredentialsActivity.NAME);
+        temail = bundle.getString(InfoCredentialsActivity.EMAIL);
+        tnewEmail = bundle.getString(InfoCredentialsActivity.NEW_EMAIL);
+        taddEmail = bundle.getString(InfoCredentialsActivity.ADD_EMAIL);
 
         Log.e(logTag, "Bundle:\n "
                 + tname + "\n"

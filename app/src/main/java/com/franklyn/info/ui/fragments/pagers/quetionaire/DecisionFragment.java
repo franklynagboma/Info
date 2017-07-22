@@ -32,6 +32,8 @@ public class DecisionFragment extends Fragment implements RadioGroup.OnCheckedCh
     private AppCompatRadioButton A1,A2,A3,A4,A5,A6, B1,B2,B3,B4,B5,B6;
     private int v1 = -1,v2 = -1,v3 = -1,v4 = -1,v5 = -1,v6 = -1;
 
+    public static boolean decisionBoolean;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -131,10 +133,13 @@ public class DecisionFragment extends Fragment implements RadioGroup.OnCheckedCh
                             AppController.DECISION6 = B6.getText().toString().trim();
                             Log.e(LOG_TAG, AppController.DECISION6);
                         }
+                        decisionBoolean = true;
                     }
-                    else
+                    else {
+                        decisionBoolean = false;
                         Toast.makeText(getActivity(), "Answer decision questionnaire",
                                 Toast.LENGTH_SHORT).show();
+                    }
                 }
                 catch (Exception i) {
                     i.printStackTrace();

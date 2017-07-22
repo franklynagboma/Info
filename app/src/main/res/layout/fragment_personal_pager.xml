@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:scrollbars="vertical">
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,6 +98,7 @@
                                 android:id="@+id/text_last_name"/>
 
                             <EditText
+                                android:id="@+id/last_name"
                                 android:layout_width="0dp"
                                 android:layout_height="50dp"
                                 android:layout_weight="1.5"
@@ -108,12 +109,10 @@
                                 android:maxLines="1"
                                 android:textColor="@color/black_text"
                                 android:textSize="13sp"
-                                android:textAllCaps="true"
                                 android:textCursorDrawable="@null"
                                 android:nextFocusDown="@+id/other_names"
-                                android:inputType="text"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                                android:id="@+id/last_name"/>
+                                android:inputType="textCapCharacters"
+                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" />
                         </LinearLayout>
 
                         <LinearLayout

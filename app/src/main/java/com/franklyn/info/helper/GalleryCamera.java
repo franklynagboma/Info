@@ -39,7 +39,7 @@ public class GalleryCamera extends Activity{
     public static final int GALLERY_CODE = 200;
 
     //storage directory
-    private static final String CAMERA_DIR = "Info camera";
+    private static final String CAMERA_DIR = "InfoCredentialsActivity camera";
 
     //uri to store image
     private static Uri fileUri;
@@ -66,7 +66,7 @@ public class GalleryCamera extends Activity{
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         addIntent.setType("image/*");
 
-        Intent chooser = Intent.createChooser(intent, "Info profile picture");
+        Intent chooser = Intent.createChooser(intent, "InfoCredentialsActivity profile picture");
         chooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[] {addIntent});
         Log.e(logTag, "Chooser Intent: " + chooser.toString());
 
@@ -116,7 +116,7 @@ public class GalleryCamera extends Activity{
 
             mediaFile = new File(mediaStorageDir.getPath()
                     +File.separator
-                    +"Info" + timeStamp + ".jpg");
+                    +"InfoCredentialsActivity" + timeStamp + ".jpg");
 
             Log.e(logTag, "Media file: " + mediaFile.toString());
         }

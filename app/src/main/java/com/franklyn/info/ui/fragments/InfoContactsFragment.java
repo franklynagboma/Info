@@ -23,7 +23,7 @@ import com.franklyn.info.db.provider.InfoContract;
 /**
  * Created by AGBOMA Franklyn on 3/9/2016.
  */
-public class InfoContactsFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
+public class InfoContactsFragment {/* extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
 
     private String logTag = InfoContactsFragment.class.getSimpleName();
 
@@ -41,7 +41,7 @@ public class InfoContactsFragment extends Fragment implements LoaderManager.Load
     private CustomAdapter customAdapter;
     public static long lastPosition;
 
-    /*public LoaderFragment reloadFragment;
+    *//*public LoaderFragment reloadFragment;
 
     public interface LoaderFragment {
         void reload(String reload);
@@ -55,7 +55,7 @@ public class InfoContactsFragment extends Fragment implements LoaderManager.Load
         }catch (ClassCastException i) {
             throw new ClassCastException(context.toString());
         }
-    }*/
+    }*//*
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,8 +78,8 @@ public class InfoContactsFragment extends Fragment implements LoaderManager.Load
         listView = (ListView) contacts.findViewById(R.id.info_contacts_list);
         image = (ImageView) contacts.findViewById(R.id.user_profileImage);
         name = (TextView) contacts.findViewById(R.id.user_profileName);
-        /*developer = (TextView) contacts.findViewById(R.id.developer_name);
-        status = (TextView) contacts.findViewById(R.id.status_name);*/
+        *//*developer = (TextView) contacts.findViewById(R.id.developer_name);
+        status = (TextView) contacts.findViewById(R.id.status_name);*//*
         contactSize = (TextView) contacts.findViewById(R.id.contact_number);
 
         lastPosition = 0;
@@ -120,7 +120,7 @@ public class InfoContactsFragment extends Fragment implements LoaderManager.Load
             contactSize.setText(String.valueOf( (lastPosition - 1) ));
             Log.e(logTag, "List size " + (lastPosition - 1) );
 
-            /*if(data.getPosition() == 0){
+            *//*if(data.getPosition() == 0){
 
                 Log.e(logTag, " data position "+data.getPosition());
 
@@ -220,7 +220,7 @@ public class InfoContactsFragment extends Fragment implements LoaderManager.Load
             contactSize.setText(String.valueOf(ContactsItems.getContactSize()));
             Log.e(logTag, "List size " + ContactsItems.getContactSize());
 
-        }*/
+        }*//*
 
         }
     }
@@ -229,5 +229,5 @@ public class InfoContactsFragment extends Fragment implements LoaderManager.Load
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
         customAdapter.swapCursor(null);
-    }
+    }*/
 }

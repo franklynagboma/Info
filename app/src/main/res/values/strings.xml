@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Info</string>
 
     <string name="hello_world">Hello world!</string>
@@ -10,6 +10,7 @@
     <string name="save_only">Save only</string>
     <string name="save_and_info">Save and register INFO</string>
     <string name="sign_up_form">Sign up on INFO</string>
+    <string name="users_title">Users</string>
     <string-array name="occupation">
         <item>none</item>
         <item>Student</item>
@@ -35,6 +36,7 @@
 
 
     <!--Personality-->
+    <string name="personality">Personality preference</string>
     <string name="personality1A"> I frequently find myself feeling irritable, impatient or anxious at work, especially when demand is high </string>
     <string name="personality1B"> Always calm at work irrespective of the demands </string>
     <string name="personality2A"> I often work on evenings and weekends and/or i rarely take an email-free holiday </string>
@@ -56,7 +58,8 @@
     <string name="personality10A"> Extend yourself into the environment </string>
     <string name="personality10B"> Defend against external demand and intrusion </string>
 
-    <!--Info-->
+    <!--Information preference-->
+    <string name="information">Information preference</string>
     <string name="info1A"> Like hearing facts and details first </string>
     <string name="info1B"> Like hearing general concepts first </string>
     <string name="info2A"> Patient continuation of what is with fine tuning </string>
@@ -79,6 +82,7 @@
     <string name="info10B"> Want visionary leadership </string>
 
     <!--Forming-->
+    <string name="forming">Forming preference</string>
     <string name="form1A"> Team player </string>
     <string name="form1B"> Work alone </string>
     <string name="form2A"> Select my own team </string>
@@ -89,6 +93,7 @@
     <string name="form4B"> Like instance messaging with team members </string>
 
     <!--Decision-->
+    <string name="decision">Decision preference</string>
     <string name="decision1A"> Seeks general facts and objectivity </string>
     <string name="decision1B"> Seeks interpersonal harmony </string>
     <string name="decision2A"> Remains detached when making decision, weighing pros and cons </string>
@@ -101,5 +106,8 @@
     <string name="decision5B"> Look at problem in terms of impact on people </string>
     <string name="decision6A"> Find incompetence stressful </string>
     <string name="decision6B"> Find disharmony stressful </string>
+
+    <!--Answers-->
+    <string name="answers">&#8266; <xliff:g id="value">%1$s</xliff:g></string>
 
 </resources>

@@ -59,7 +59,7 @@ public class dbContents {
 
     private static void insert(){
 
-        ContentValues values = new ContentValues();
+        /*ContentValues values = new ContentValues();
 
         values.put(InfoContract.InfoProfile.INFO_NAME,
                 dbName);
@@ -110,7 +110,7 @@ public class dbContents {
         sharedEdit.putString(IMAGE_TYPE, whichOperation);
         sharedEdit.apply();
 
-        Log.e(logTag, "saved on DB");
+        Log.e(logTag, "saved on DB");*/
     }
 
 

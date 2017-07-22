@@ -12,13 +12,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.franklyn.info.R;
 import com.franklyn.info.app.AppController;
 import com.franklyn.info.helper.io.TextChecker;
-import com.franklyn.info.ui.activities.Info;
+import com.franklyn.info.ui.activities.InfoCredentialsActivity;
 
 /**
  * Created by AGBOMA franklyn on 7/8/16.
@@ -40,6 +39,8 @@ public class ContactPagerFragment extends Fragment {
     public static final String COUNTRY_NAME = "country_name";
     public static final String EMAIL_ADDRESS = "email_address";
     public static final String ALT_EMAIL_ADDRESS = "alt_email_address";
+
+    public static boolean contactBoolean;
 
     @Nullable
     @Override
@@ -68,7 +69,10 @@ public class ContactPagerFragment extends Fragment {
 
                         Toast.makeText(getActivity(), "Contact Information, incompletely",
                                 Toast.LENGTH_SHORT).show();
+                        contactBoolean = false;
                     }
+                    else
+                        contactBoolean = true;
                 }
                 catch (Exception i){
                     i.printStackTrace();
@@ -91,8 +95,8 @@ public class ContactPagerFragment extends Fragment {
         mobileNumber = (EditText) init.findViewById(R.id.mobile_number);
         //mobileNumber.setTypeface(AppController.getInstance().getRalewayBoldFace(getActivity()));
         emailAddress = (EditText) init.findViewById(R.id.email_name);
-        emailAddress.setText(!Info.getEmailPre.equals("")
-                ? Info.getEmailPre : AppController.EMAIL_PRE);
+        emailAddress.setText(!InfoCredentialsActivity.getEmailPre.equals("")
+                ? InfoCredentialsActivity.getEmailPre : AppController.EMAIL_PRE);
         Log.e(LOG_TAG, "Email saved " + AppController.EMAIL_PRE);
         //emailAddress.setTypeface(AppController.getInstance().getRalewayBoldFace(getActivity()));
         altEmailAddress = (EditText) init.findViewById(R.id.alt_name);

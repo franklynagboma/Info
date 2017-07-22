@@ -1,6 +1,9 @@
 package com.franklyn.info.ui.fragments.pagers.quetionaire;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -18,7 +21,10 @@ import android.widget.Toast;
 
 import com.franklyn.info.R;
 import com.franklyn.info.app.AppController;
+import com.franklyn.info.db.LocalDb;
 import com.franklyn.info.helper.io.TextChecker;
+import com.franklyn.info.ui.fragments.pagers.ContactPagerFragment;
+import com.franklyn.info.ui.fragments.pagers.PersonalPagerFragment;
 
 /**
  * Created by AGBOMA franklyn on 6/4/17.
@@ -40,6 +46,24 @@ public class DetailsFragment extends Fragment{
     public final static String JOB = "job";
     public final static String YEAR_EXP = "year_exp";
 
+    private ProgressDialog loadProgress;
+
+    public Transfer nextClass;
+    public interface Transfer {
+        void transferClass(boolean value);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            nextClass = (Transfer) context;
+        }
+        catch (ClassCastException i) {
+            throw  new ClassCastException(context.toString());
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -52,6 +76,9 @@ public class DetailsFragment extends Fragment{
     }
 
     private void init (View details) {
+
+        loadProgress = new ProgressDialog(getActivity());
+        loadProgress.setCancelable(false);
 
         summary_holder = (TextInputLayout) details.findViewById(R.id.summary_holder);
         job_holder = (TextInputLayout) details.findViewById(R.id.job_holder);
@@ -93,7 +120,19 @@ public class DetailsFragment extends Fragment{
                         if(r1 == no.getId())
                             AppController.CURRENTLY = no.getText().toString().trim();
 
-                        getAllSend();
+                        if(PersonalPagerFragment.personalBoolean
+                                && ContactPagerFragment.contactBoolean
+                                && DecisionFragment.decisionBoolean
+                                && FormingFragment.formingBoolean
+                                && InformationFragment.informationBoolean
+                                && PersonalityFragment.personalityBoolean) {
+                            loadProgress.setMessage("Saving local...");
+                            loadProgress.show();
+                            getAllSave();
+                        }
+                        else
+                            Toast.makeText(getActivity(), "Empty field(s)",
+                                    Toast.LENGTH_SHORT).show();
 
                     }
                 }
@@ -101,8 +140,26 @@ public class DetailsFragment extends Fragment{
         });
     }
 
-    private void getAllSend() {
+    private void getAllSave() {
         //check if all is not empty before proceed to offline and online
-        Log.e(LOG_TAG, "Send all offline and online");
+        new LocalDb(getActivity()).insertToLocalDb(); // save to offline
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadProgress.setMessage("Saving online...");
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(loadProgress.isShowing()){
+                            loadProgress.dismiss();
+                            //testing saved class
+                            nextClass.transferClass(true);
+                        }
+                        if(new LocalDb(getActivity()).isValue())
+                            Log.e(LOG_TAG, "Saved all offline, next online");//save to online
+                    }
+                }, 2000);
+            }
+        }, 1000);
     }
 }

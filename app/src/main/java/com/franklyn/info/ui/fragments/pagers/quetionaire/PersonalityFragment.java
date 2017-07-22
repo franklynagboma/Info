@@ -34,6 +34,8 @@ public class PersonalityFragment extends Fragment implements RadioGroup.OnChecke
     private int v1 = -1,v2 = -1,v3 = -1,v4 = -1, v5 = -1,
             v6 = -1, v7 = -1, v8 = -1, v9 = -1, v10 = -1;
 
+    public static boolean personalityBoolean;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -184,10 +186,13 @@ public class PersonalityFragment extends Fragment implements RadioGroup.OnChecke
                             Log.e(LOG_TAG, AppController.PERSONALITY10);
                         }
 
+                        personalityBoolean = true;
                     }
-                    else
+                    else {
+                        personalityBoolean = false;
                         Toast.makeText(getActivity(), "Answer personality questionnaire",
                                 Toast.LENGTH_SHORT).show();
+                    }
                 }
                 catch (Exception i) {
                     i.printStackTrace();

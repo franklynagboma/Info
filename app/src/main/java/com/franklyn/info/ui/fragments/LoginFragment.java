@@ -2,18 +2,13 @@ package com.franklyn.info.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
@@ -21,13 +16,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.dd.CircularProgressButton;
 import com.franklyn.info.R;
-import com.franklyn.info.app.AppController;
-import com.franklyn.info.ui.activities.Info;
+import com.franklyn.info.ui.activities.InfoCredentialsActivity;
 
 /**
  * Created by AGBOMA Franklyn on 3/18/2016.
@@ -186,7 +179,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                 checkTextField();
                 break;
             case R.id.info_signup:
-                notReg.register(Info.FILL);
+                notReg.register(InfoCredentialsActivity.FILL);
                 break;
         }
     }
@@ -194,20 +187,20 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     private void checkTextField() {
 
         if(TextUtils.isEmpty(userEmail.getText().toString())) {
-            Info.snackBar(loginView, "Email field is empty");
+            InfoCredentialsActivity.snackBar(loginView, "Email field is empty");
             userEmail.setError("Input Email");
             userEmail.requestFocus();
 
         }
         if(TextUtils.isEmpty(userKey.getText().toString())) {
-            Info.snackBar(loginView, "Info key field is empty");
-            userKey.setError("Input Info key");
+            InfoCredentialsActivity.snackBar(loginView, "InfoCredentialsActivity key field is empty");
+            userKey.setError("Input InfoCredentialsActivity key");
             userKey.requestFocus();
         }
         if(TextUtils.isEmpty(userEmail.getText().toString())
                 && TextUtils.isEmpty(userKey.getText().toString())) {
 
-            Info.snackBar(loginView,"Fields cannot be empty");
+            InfoCredentialsActivity.snackBar(loginView,"Fields cannot be empty");
             userEmail.requestFocus();
         }
 
@@ -281,7 +274,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     private void stopProgressButton() {
 
         Log.e(logTag, "No data found");
-        Info.snackBar(loginView, "No data found");
+        InfoCredentialsActivity.snackBar(loginView, "No data found");
         //progress operational
         loginProgress.setProgress(0);
         loginProgress.setIndeterminateProgressMode(false);

@@ -39,13 +39,14 @@ public class PersonalPagerFragment extends Fragment {
 
     private final String LOG_TAG = PersonalPagerFragment.class.getSimpleName();
 
-    private String title;
     private EditText firstName, lastName, otherNames;
     private RadioGroup gender;
 
     public static final String FIRST_NAME = "first_name";
     public static final String LAST_NAME = "last_name";
     public static final String OTHER_NAMES = "other_names";
+
+    public static boolean personalBoolean;
 
     @Nullable
     @Override
@@ -74,7 +75,10 @@ public class PersonalPagerFragment extends Fragment {
 
                         Toast.makeText(getActivity(), "Personal Information, incompletely",
                                 Toast.LENGTH_SHORT).show();
+                        personalBoolean = false;
                     }
+                    else
+                        personalBoolean = true;
                 }
                 catch (Exception i){
                     i.printStackTrace();

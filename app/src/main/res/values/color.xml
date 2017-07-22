@@ -2,8 +2,9 @@
 <resources>
 
     <color name="colorPrimaryDark">#BDBDBD</color>
-    <color name="colorPrimary">#BDBDBD</color>
+    <color name="colorPrimary">#880E4F</color>
     <color name="colorAccent">#880E4F</color>
+    <!--BDBDBD-->
 
     <color name="colorGroup">#D9FFFFFF</color>
     <color name="colorDetails">#2E7D32</color>
@@ -16,13 +17,17 @@
     <color name="background_login">#A6BDBDBD</color>
     <color name="blue_cover">#FF8F00</color>
     <color name="black_text">#A6000000</color>
+    <color name="black_intext">#66000000</color>
     <color name="white">#FFFFFF</color>
     <color name="white_light">#D9FFFFFF</color>
     <color name="white_transparent">#B3FFFFFF</color>
     <color name="list_background">#73000000</color>
     <color name="view">#4527A0</color>
     <color name="view_black">#1A000000</color>
+    <color name="black_gone">#0D000000</color>
     <color name="view_transp">#40000000</color>
+    <color name="card_dark">#40880E4F</color>
+    <color name="card_background">#EDEDED</color>
 
     <color name="colorNext_one">#3E2723</color>
     <color name="colorNext_two">#F57F17</color>

@@ -1,29 +1,5 @@
 package com.franklyn.info.ui.fragments;
 
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.util.LruCache;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.PopupMenu;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.Volley;
-import com.franklyn.info.R;
-import com.franklyn.info.helper.TextWriter;
-import com.franklyn.info.ui.activities.Info;
-import com.franklyn.info.ui.view.CircularImageView;
-
 /**
  * Created by AGBOMA Franklyn on 3/15/2016.
  */
@@ -82,8 +58,8 @@ public class UserHeaderFragment {/*extends Fragment implements View.OnClickListe
 
     private void checkBundle(Bundle bundle) {
 
-        tname = bundle.getString(Info.HEADER_NAME);
-        timageUril = bundle.getString(Info.IMAGE);
+        tname = bundle.getString(InfoCredentialsActivity.HEADER_NAME);
+        timageUril = bundle.getString(InfoCredentialsActivity.IMAGE);
 
         Log.e(logTag, "Bundle:\n "
                 + tname + "\n" + timageUril + "\n");

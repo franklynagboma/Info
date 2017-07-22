@@ -159,8 +159,8 @@ public class CustomAdapter extends SimpleCursorAdapter{
             }
 
             cardContact.setVisibility(View.GONE);
-            Log.e(logTag, "card Position " + InfoContactsFragment.lastPosition
-                    + " Gone.\n" + "Name " + getName);
+            /*Log.e(logTag, "card Position " + InfoContactsFragment.lastPosition
+                    + " Gone.\n" + "Name " + getName);*/
 
         }
 

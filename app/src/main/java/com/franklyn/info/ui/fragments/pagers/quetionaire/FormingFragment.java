@@ -31,6 +31,8 @@ public class FormingFragment extends Fragment implements RadioGroup.OnCheckedCha
     private AppCompatRadioButton A1,A2,A3,A4, B1,B2,B3,B4;
     private int v1 = -1,v2 = -1,v3 = -1,v4 = -1;
 
+    public static boolean formingBoolean;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -107,10 +109,13 @@ public class FormingFragment extends Fragment implements RadioGroup.OnCheckedCha
                             Log.e(LOG_TAG, AppController.FORMING4);
                         }
 
+                        formingBoolean = true;
                     }
-                    else
+                    else {
+                        formingBoolean = false;
                         Toast.makeText(getActivity(), "Answer forming questionnaire",
                                 Toast.LENGTH_SHORT).show();
+                    }
                 }
                 catch (Exception i) {
                     i.printStackTrace();

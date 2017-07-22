@@ -1,28 +1,22 @@
 package com.franklyn.info.ui.fragments;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.franklyn.info.R;
-import com.franklyn.info.ui.activities.Info;
+import com.franklyn.info.ui.activities.InfoCredentialsActivity;
 
 /**
  * Created by AGBOMA franklyn on 2/24/17.
@@ -89,7 +83,7 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
                     String getEmail = emailReg.getText().toString();
                     String getPassword = passwordReg.getText().toString();
 
-                    Toast.makeText(getActivity(), "Saved and fill Info", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Saved and fill InfoCredentialsActivity", Toast.LENGTH_SHORT).show();
                     filled.filledCompleted(SAVED_FILL, getEmail, getPassword);
                 }
                 break;
@@ -260,26 +254,26 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
 
         if(getEmail.isEmpty() && getPassword.isEmpty()
                 && getConfirmPassword.isEmpty()) {
-            Info.snackBar(v, "Empty fields");
+            InfoCredentialsActivity.snackBar(v, "Empty fields");
             emailReg.requestFocus();
             return false;
         }
         else if(getPassword.isEmpty() && getConfirmPassword.isEmpty()) {
-            Info.snackBar(v, "Empty fields");
+            InfoCredentialsActivity.snackBar(v, "Empty fields");
             passwordReg.requestFocus();
             return false;
         }
 
 
         if(TextUtils.isEmpty(emailReg.getText().toString())) {
-            Info.snackBar(v, "Email field is empty");
+            InfoCredentialsActivity.snackBar(v, "Email field is empty");
             emailReg.setError("Input email");
             emailReg.requestFocus();
             return false;
         }
         else if(!getEmail.contains("@")
                 || !getEmail.contains(".") || getEmail.contains(" ")) {
-            Info.snackBar(v, "Not a valid email");
+            InfoCredentialsActivity.snackBar(v, "Not a valid email");
             emailReg.setError("Input email");
             emailReg.requestFocus();
             return false;
@@ -287,21 +281,21 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
 
         if(TextUtils.isEmpty(passwordReg.getText().toString())
                 || getPassword.length() < 6) {
-            Info.snackBar(v, getPassword.length() <= 0 ? "Password field is empty" : "Too short");
+            InfoCredentialsActivity.snackBar(v, getPassword.length() <= 0 ? "Password field is empty" : "Too short");
             passwordReg.setError(getPassword.length() <= 0 ? "Input password" : "Weak");
             passwordReg.requestFocus();
             return false;
         }
 
         if(TextUtils.isEmpty(confirmPasswordReg.getText().toString())) {
-            Info.snackBar(v, "Confirm field is empty");
+            InfoCredentialsActivity.snackBar(v, "Confirm field is empty");
             confirmPasswordReg.setError("Input password");
             confirmPasswordReg.requestFocus();
             return false;
         }
         else if(!getPassword.equals(getConfirmPassword)){
             //check if the password is equal
-            Info.snackBar(v, "Passwords does not match");
+            InfoCredentialsActivity.snackBar(v, "Passwords does not match");
             confirmPasswordReg.setError("Not match");
             confirmPasswordReg.requestFocus();
             return false;

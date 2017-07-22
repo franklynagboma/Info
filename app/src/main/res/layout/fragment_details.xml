@@ -81,7 +81,7 @@
                                 android:paddingRight="5dp"
                                 android:paddingTop="10dp"
                                 android:nextFocusDown="@+id/years_content"
-                                android:inputType="textMultiLine"
+                                android:inputType="text"
                                 android:textCursorDrawable="@null" />
                         </android.support.design.widget.TextInputLayout>
                         <android.support.design.widget.TextInputLayout

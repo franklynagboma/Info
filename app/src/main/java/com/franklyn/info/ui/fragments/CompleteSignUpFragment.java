@@ -2,17 +2,14 @@ package com.franklyn.info.ui.fragments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -27,14 +24,11 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.daimajia.easing.linear.Linear;
 import com.franklyn.info.R;
 import com.franklyn.info.adapter.PlaceAutocompleteAdapter;
 import com.franklyn.info.db.AndroidDatabaseManager;
 import com.franklyn.info.helper.GalleryCamera;
 import com.franklyn.info.helper.dbContents;
-import com.franklyn.info.ui.activities.Info;
-import com.franklyn.info.ui.view.CircularImageView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.AutocompletePrediction;
@@ -153,10 +147,10 @@ public class CompleteSignUpFragment extends Fragment
 
     /*private void checkBundle(Bundle bundle) {
 
-        getName = bundle.getString(Info.NAME);
-        getEmail = bundle.getString(Info.EMAIL);
-        getImage = bundle.getString(Info.IMAGE);
-        getWhichI = bundle.getString(Info.BUTTON_INFO);
+        getName = bundle.getString(InfoCredentialsActivity.NAME);
+        getEmail = bundle.getString(InfoCredentialsActivity.EMAIL);
+        getImage = bundle.getString(InfoCredentialsActivity.IMAGE);
+        getWhichI = bundle.getString(InfoCredentialsActivity.BUTTON_INFO);
 
     }*/
 
